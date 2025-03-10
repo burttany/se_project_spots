@@ -23,3 +23,7 @@ The project is deployed via GitHub Pages. [Spots](https://burttany.github.io/se_
 - Managing BEM structure across multiple components.
 - Ensuring no horizontal scrolling on small screens.
 - Balancing absolute and relative positioning for layout consistency.
+
+## Project Video
+
+Video link: https://drive.google.com/file/d/1dmFbsBLVcn0BfKJFbn6U8aM8Rhiq6ICT/view?usp=sharing
