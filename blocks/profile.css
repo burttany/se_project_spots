@@ -20,14 +20,16 @@
   margin: 0 0 12px;
   font-weight: 500;
   font-size: 32px;
-  line-height: 1;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  line-clamp: 3;
+  color: #212121;
+  line-height: 1.2;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  line-clamp: 3;
+  box-orient: vertical;
+  overflow: hidden;
   max-width: 420px;
+  text-overflow: ellipsis;
 }
 
 .profile__description {
@@ -38,19 +40,24 @@
   opacity: 70%;
   text-overflow: ellipsis;
   overflow: hidden;
-  line-clamp: 3;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  line-clamp: 3;
+  box-orient: vertical;
   max-width: 420px;
 }
 
 .profile__edit-btn {
+  background-image: url(../images/Pencil.svg);
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: left center;
   align-items: center;
-  padding: 0;
+  padding-left: 24px;
   margin-top: auto;
   width: 160px;
-  height: 16px;
+  height: 32px;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -65,9 +72,17 @@
   display: flex;
 }
 
+.profile__edit-btn:hover {
+  opacity: 1;
+}
+
 .profile__add-btn {
-  align-self: end;
-  padding: 0;
+  background-image: url(../images/plus.svg);
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  background-position: 16px center;
+  align-items: center;
+  padding: 18px 32px;
   margin-left: auto;
   width: 157px;
   height: 52px;
@@ -79,13 +94,15 @@
   cursor: pointer;
   color: #fcf5e5;
   background-color: #212121;
-  white-space: nowrap;
   border-radius: 8px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 18px 32px;
+  align-self: end;
   position: relative;
+}
+
+.profile__add-btn:hover {
+  opacity: 80%;
 }
 
 @media screen and (max-width: 627px) {
@@ -114,12 +131,6 @@
     margin: 0 0 32px;
     font-size: 16px;
     max-width: 288px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    line-clamp: 3;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
   }
 
   .profile__column {
@@ -134,6 +145,7 @@
   }
 
   .profile__add-btn {
+    display: block;
     margin: 0 auto;
     font-size: 16px;
     align-self: center;

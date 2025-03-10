@@ -2,13 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 104px;
-  height: 16px;
-  top: 1340px;
-  left: 668px;
+  padding: 60px 0;
 }
 
 .footer__copyright {
+  margin: 0;
   color: #212121;
   opacity: 70%;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
@@ -16,20 +14,4 @@
   font-size: 16px;
   line-height: 16px;
   letter-spacing: 0%;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-@media screen and (max-width: 627px) {
-  .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 104px;
-    height: 16px;
-    top: 2448px;
-    left: 108px;
-  }
 }
