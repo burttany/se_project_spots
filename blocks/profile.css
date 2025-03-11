@@ -75,15 +75,12 @@
 }
 
 .profile__add-btn {
-  background-image: url(../images/plus.svg);
-  background-size: 12px 12px;
-  background-repeat: no-repeat;
-  background-position: 16px center;
+  display: flex;
   align-items: center;
-  padding: 18px 32px;
+  align-self: end;
   margin-left: auto;
-  width: 157px;
-  height: 52px;
+  justify-content: center;
+  padding: 18px 32px;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -93,10 +90,20 @@
   color: #fcf5e5;
   background-color: #212121;
   border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-self: end;
   position: relative;
+  border: none;
+  width: 157px;
+  height: 52px;
+}
+
+.profile__add-btn::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-image: url(../images/plus.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: inline-block;
 }
 
 .profile__add-btn:hover {
