@@ -33,7 +33,7 @@
   right: 50px;
   width: 40px;
   height: 40px;
-  background-image: url(../images/Close\ X.png);
+  background-image: url(../images/Close\ Icon.svg);
   background-color: #fff;
   background-size: cover;
   background-repeat: no-repeat;
@@ -69,10 +69,6 @@
   cursor: pointer;
   opacity: 70%;
   border: 1px;
-}
-
-.modal__label:hover {
-  opacity: 1;
 }
 
 .modal__input:not(:placeholder-shown) {
