@@ -33,7 +33,7 @@
   right: 50px;
   width: 40px;
   height: 40px;
-  background-image: url(../images/Close\ Icon.svg);
+  background-image: url(../images/CloseIcon.svg);
   background-color: #fff;
   background-size: cover;
   background-repeat: no-repeat;
@@ -65,9 +65,8 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1.1;
-  color: #212121;
+  color: #212121b2;
   cursor: pointer;
-  opacity: 70%;
   border: 1px;
 }
 
