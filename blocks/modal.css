@@ -27,13 +27,34 @@
   border-radius: 8px;
 }
 
+.modal__container_type_preview {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  background: transparent;
+  width: 446.43px;
+  height: 661px;
+  border-radius: 8px;
+  width: unset;
+  max-width: unset;
+}
+
+.modal__image {
+  width: 100%;
+  object-fit: contain;
+  max-width: 80vw;
+  max-height: 80vh;
+  padding: 0;
+}
+
 .modal__close-btn {
   position: absolute;
   top: 32px;
   right: 50px;
   width: 40px;
   height: 40px;
-  background-image: url(../images/CloseIcon.svg);
+  background-image: url(../images/CloseGrey.svg);
   background-color: #fff;
   background-size: cover;
   background-repeat: no-repeat;
@@ -45,6 +66,44 @@
 
 .modal__close-btn:hover {
   opacity: 1;
+}
+
+.modal__close-btn_type_preview {
+  background-image: url(../images/CloseIcon.svg);
+  opacity: 1;
+  position: absolute;
+  top: 8px;
+  right: -40px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.modal__close-btn_type_preview:hover {
+  background-image: url(../images/CloseHover.svg);
+}
+
+.modal__caption {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #ffffff;
+  background-color: #212121;
+  border-radius: 8px;
+  margin: 8px 0px 0px;
+  width: fit-content;
+  padding: 10px 15px;
+  white-space: normal;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .modal__title {
@@ -101,6 +160,7 @@
   border-radius: 8px;
   position: relative;
   border: none;
+  transition: background 0.3s;
 }
 
 .modal__submit-btn:hover {
@@ -113,7 +173,7 @@
   }
 
   .modal__container {
-    padding: 12px;
+    padding: 22px 12px 12px;
   }
 
   .modal__close-btn {
@@ -141,5 +201,25 @@
     align-self: center;
     width: 100%;
     max-width: 276px;
+  }
+
+  .modal__container_type_preview {
+    padding: 0;
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .modal__close-btn_type_preview {
+    top: -60px;
+    right: 0;
+    position: absolute;
+  }
+
+  .modal__caption {
+    font-size: 16px;
+  }
+
+  .modal__image {
+    max-width: 100%;
   }
 }
