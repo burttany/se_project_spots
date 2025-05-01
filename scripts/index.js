@@ -13,6 +13,7 @@ const editProfileModalDescriptionInput = document.querySelector(
 
 const cardModal = document.querySelector("#add-card-modal");
 const cardForm = cardModal.querySelector(".modal__form");
+const cardSubmitBtn = cardModal.querySelector(".modal__submit-btn");
 const cardModalCloseBtn = cardModal.querySelector(".modal__close-btn");
 const cardNameInput = cardModal.querySelector("#add-card-name-input");
 const cardLinkInput = cardModal.querySelector("#add-card-link-input");
@@ -28,14 +29,6 @@ const cardsList = document.querySelector(".cards__list");
 const cardTemplate = document.querySelector("#card-template");
 
 const closeButtons = document.querySelectorAll(".modal__close-btn");
-
-function openModal(modal) {
-  modal.classList.add("modal_opened");
-}
-
-function closeModal(modal) {
-  modal.classList.remove("modal_opened");
-}
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
@@ -53,6 +46,11 @@ function handleAddCardSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   evt.target.reset();
+  const inputList = Array.from(
+    cardForm.querySelectorAll(settings.inputSelector)
+  );
+  const submitButton = cardForm.querySelector(settings.submitButtonSelector);
+  toggleButtonState(inputList, submitButton, settings);
   closeModal(cardModal);
 }
 
@@ -92,10 +90,25 @@ function getCardElement(data) {
 profileEditButton.addEventListener("click", () => {
   editProfileModalNameInput.value = profileName.textContent;
   editProfileModalDescriptionInput.value = profileDescription.textContent;
+
+  resetValidation(
+    profileFormElement,
+    [editProfileModalNameInput, editProfileModalDescriptionInput],
+    settings
+  );
+
   openModal(editProfileModal);
 });
 
 profileAddButton.addEventListener("click", () => {
+  const inputList = Array.from(
+    cardForm.querySelectorAll(settings.inputSelector)
+  );
+  const submitButton = cardForm.querySelector(settings.submitButtonSelector);
+
+  resetValidation(cardForm, inputList, settings);
+  toggleButtonState(inputList, submitButton, settings);
+
   openModal(cardModal);
 });
 
